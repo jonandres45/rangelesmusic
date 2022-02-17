@@ -1,0 +1,27 @@
+.capa-light{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+
+.center-screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.song-description{
+    width: 50%;
+}
+
+
+@media (max-width: 600px) {
+    .song-description{
+        width: 80%;
+    }
+}
+
+@media (max-width: 450px) {
+    .song-description{
+        width: 100%;
+    }
+}

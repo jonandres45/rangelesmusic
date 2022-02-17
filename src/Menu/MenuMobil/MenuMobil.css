@@ -1,0 +1,10 @@
+.menu-mobil{
+    display: none;
+    background: red;
+}
+
+@media (max-width: 900px) {
+    .menu-mobil{
+        display: block;
+    }
+}

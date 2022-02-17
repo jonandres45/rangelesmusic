@@ -1,0 +1,14 @@
+.MenuVar{
+    background: rgba(255, 255, 255, 1);
+    color: black;
+    border: none;
+}
+
+.btn-menu{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    font-weight: 800;
+    transition: .4;
+    border-bottom: solid white 1px;
+}
