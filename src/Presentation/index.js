@@ -1,6 +1,6 @@
 import React from 'react';
 import './Presentation.css';
-import video from '../static/video/richi.mp4';
+//import video from '../static/video/richi.mp4';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
@@ -32,8 +32,8 @@ function Presentation(){
             </Box>
             </div>
             <video muted autoPlay loop>
-                    <source src={video} type="video/mp4"></source>
-                </video>
+                <source src={'../static/video/richi.mp4'} type="video/mp4"></source>
+            </video>
             <div className='capa'></div>
         </div>
     );
