@@ -15,11 +15,6 @@
     color: white;
 }
 
-@font-face {
-    font-family: 'NewYork';
-    src: url('../static/fonts/NewYork.otf');
-}
-
 .promo h1{
     color: white;
     font-size: 12vh;
