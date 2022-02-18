@@ -48,13 +48,13 @@ function Carousel(){
           modules={[Autoplay, Pagination, Navigation]}
         >
           {listTracks.map(track =>(
-            <SwiperSlide>
+            <SwiperSlide key={track.title}>
               <Release>
                 <Tracks
                   title={track.title}
                   description={track.description}
                   image={track.image}
-                  background={track.background}
+                  background={track.background}                  
                 />
               </Release>
             </SwiperSlide>
