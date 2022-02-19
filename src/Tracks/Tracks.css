@@ -3,3 +3,23 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+.background-dopamine{
+    background-image: url('../static/images/backDopamine.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.background-pinko{
+    background-image: url('../static/images/backPinko.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.background-crystal{
+    background-image: url('../static/images/backCrystal.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.background-citla{
+    background-image: url('../static/images/backCitla.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+}

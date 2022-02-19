@@ -6,9 +6,10 @@
 
 .btn-menu{
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'NewYork', serif;
     font-size: large;
-    font-weight: 800;
+    font-weight: lighter;
     transition: .4;
     border-bottom: solid white 1px;
+    text-transform: capitalize; 
 }

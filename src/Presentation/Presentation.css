@@ -1,3 +1,5 @@
+
+
 .hero{
     min-height: 100vh;
     position: relative;
@@ -20,6 +22,8 @@
     font-size: 12vh;
     font-family: 'NewYork';
     font-weight: 200;
+    text-align: center;
+    margin-bottom: 0px;
 }
 
 video{
@@ -54,12 +58,34 @@ video{
 
 .titulo{
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 0px;
+   
 }
+
+.linear-wipe {
+
+    background: linear-gradient(to left, #FFF 20%, #FFF 40%, rgb(88, 88, 88) 60%, #FFF 80%);
+    background-size: 200% auto;
+    
+    color: #000;
+    background-clip: text;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: shine 10s linear infinite;
+    
+  }
+
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
 .subtitle-ri{
     padding: 0;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-align: right;
     font-family: 'NewYork';
     font-weight: 200;

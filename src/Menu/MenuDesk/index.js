@@ -41,7 +41,7 @@ function MenuDesk(){
               sx={{m:5}}
               onClick={(event)=> handleClick(event, '#release')}
             >
-                <span className='btn-menu'> Release </span>
+                <span className='btn-menu'> Releases </span>
             </Button>
             <Button 
               color="inherit" 

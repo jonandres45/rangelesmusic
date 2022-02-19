@@ -31,8 +31,7 @@ function Contact(){
                     <h1 className='title-contact'>Contact</h1>
                 </Grid>
                 <Grid item lg={4} md={6} sm={6} xs={10}>
-                    <label>Name</label>
-                    <input type="text" className='input-form-contact'></input>
+                    <label>Name</label><input type="text" className='input-form-contact'></input>
                     <label>Email</label>
                     <input type="text" className='input-form-contact'></input>
                     <label>Phone Number</label>

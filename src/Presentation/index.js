@@ -19,8 +19,8 @@ function Presentation(){
             >
                 <Grid>
                     <Grid item xs={12}>
-                        <h1 className='titulo'>Ricardo Angeles</h1>
-                        <p className='subtitle-ri'>Music producer & Creative</p>
+                        <h1 className='titulo' class='linear-wipe'>Ricardo Angeles</h1>
+                        <p className='subtitle-ri' >DJ / Music producer & Creative</p>
                     </Grid>
                     
                     <Grid item xs={12} style={{ justifyContent: "center", display: "flex" }}>
