@@ -6,10 +6,10 @@ import './Player.css';
 
 function Player(){
 
-    const music = '../static/songs/DOPAMINE-REMIX/Rehoxx _ SECMOS - Dopamine (Ricardo Angeles Remix)_MP3_320KBPS_MASTER.mp3';
+    const music = '../static/songs/RicardoAngeles_PhillipeLois-CrystalColors/RicardoAngeles_PhillipeLois-CrystalColors(OriginalMix).mp3';
     return (
         <AudioPlayer 
-            src={'../static/songs/prueba.mp3'} 
+            src={music} 
             layout="horizontal-reverse"
             onPlay={true}
         />

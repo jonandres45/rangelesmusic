@@ -5,15 +5,9 @@ import './Release.css';
 
 function Release(props){
     return (
-        <Box
-            sx={{
-                height: "100vh",
-                backgroundColor: 'black',
-                color: 'white',
-                flexGrow: 1,
-                textAlign:'center',
-            }}
+        <Box        
             id="release"
+            sx={{ flexGrow: 1 }}
         >
             <Grid 
                 container
