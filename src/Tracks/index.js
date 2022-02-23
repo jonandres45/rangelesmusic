@@ -3,21 +3,22 @@ import Grid from '@mui/material/Grid';
 import './Tracks.css';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Avatar from '@mui/material/Avatar';
-import PauseIcon from '@mui/icons-material/Pause';
-
+//import PauseIcon from '@mui/icons-material/Pause';
+import {Context} from '../Context';
+import LinearProgress from '@mui/material/LinearProgress';
 
 function Tracks(props){
-    const img = props.image;
-    const [playIcon, setPlayIcon] = React.useState(true);
-    let icon = "";
+    const {resetStatus} = React.useContext(Context);
+    const [perro, setPerro] = React.useState(props.play);
+    console.log(props.play);
+    const playMusic = ()=>{        
+        resetStatus(props.title);
+    }
 
-    if(playIcon)icon = <PlayArrowIcon className='icon-play' sx={{ fontSize: 50 }} onClick={()=>toggleMusic()}/>;
-    else icon = <PauseIcon className='icon-play' sx={{ fontSize: 50 }} onClick={()=>toggleMusic()}/>
+    const eje = ()=>{
+        setPerro(true);
+    }
     
-
-    const toggleMusic = ()=>{
-        setPlayIcon(false);
-    };
 
     return(
         <React.StrictMode>
@@ -30,12 +31,17 @@ function Tracks(props){
             <Grid item xs={12} md={6} className={props.background}>
                 <div className="center-screen capa-light">
                     <div>
-                        <img alt='ligth' src={img} style={{maxWidth: '300px'}}></img>
-                        <div className='center-screen'>
-                            <Avatar sx={{ width: 60, height: 60, bgcolor:'black' }}>                                
-                                {icon}
-                            </Avatar>
-                        </div>
+                        <img alt='ligth' src={props.image} style={{maxWidth: '300px'}}></img>
+                        {perro}
+                        <button onClick={()=>eje()}>Ejemplo</button>
+                            {perro ? <LinearProgress/> : 
+                            <div className='center-screen'>
+                                <Avatar sx={{ width: 60, height: 60, bgcolor:'black' }}>                                
+                                    <PlayArrowIcon className='icon-play' sx={{ fontSize: 50, rounded:'1' }} onClick={()=>playMusic()}/>
+                                </Avatar>
+                            </div>
+                            }
+                        
                     </div>
                 </div>
             </Grid>

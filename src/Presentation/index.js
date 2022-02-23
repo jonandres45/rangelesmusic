@@ -19,7 +19,7 @@ function Presentation(){
             >
                 <Grid>
                     <Grid item xs={12}>
-                        <h1 className='titulo' class='linear-wipe'>Ricardo Angeles</h1>
+                        <h1 className='titulo linear-wipe'>Ricardo Angeles</h1>
                         <p className='subtitle-ri' >DJ / Music producer & Creative</p>
                     </Grid>
                     
