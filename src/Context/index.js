@@ -40,24 +40,29 @@ function ContextProvider(props){
         title: 'RICARDO ANGELES - Citlaltepetl (Original Mix)[EXCLUSIVE FOR VERFLIXT]',
         description: 'In pre-christian antiquity, long before the Teotihuacan, Toltec, and Aztec civilizations, this entire region was called Poyauhtlán. This volcano is the geological representation of the god Poyauhtecatl. That is why the original name of the volcano is Poyautecatl, which means "the one where the mist thins", although it was better known by the name of Citlaltépetl, from the Nahuatl Citlalli (star) and Tepētl (mountain), which together means "star mountain" , because its snowy summit shines all day. A reference that explains the name of “star mountain” is that from one of the neighboring towns to the volcano, Coscomatepec, in the autumn to winter seasons at night, the planet Venus (the brightest star in the sky) could be seen crossing the sky over the crater of the volcano while passing the night.',
         image: '../static/songs/RicardoAngeles-Citlaltepetl/DESIGN_ELEGANT_Citlaltepetl_PORTADA.jpg',
-        song: '../static/songs/RicardoAngeles_PhillipeLois-CrystalColors/RicardoAngeles_PhillipeLois-CrystalColors(OriginalMix).mp3',
+        song: '../static/songs/RicardoAngeles-Citlaltepetl/RICARDO ANGELES - Citlaltepetl (Original Mix)_master_004_15_ene_22',
         background: 'background-citla',
         play: false
       },
     ]
     const [listTracksOrigin, setlistTracksOrigin] = React.useState(obj);
 
-      const resetStatus = (data)=>{
+      const resetStatus = (data, song)=>{
         const res = listTracksOrigin.findIndex(obj => obj.title === data);
         const newList = [...obj];
-        newList[res].play = true;
+        newList[res].play = true;        
         setlistTracksOrigin(newList);
+        setRefMusic(song);
       }
+
+    const [refMusic, setRefMusic] = React.useState('../static/songs/LIGHT/Ricardo_Angeles_Light_feat._Hadja_(Original Mix).mp3');
 
     return (
         <Context.Provider value={{
             listTracksOrigin,
-            resetStatus
+            resetStatus,
+            refMusic,
+            setRefMusic
         }}>
             {props.children}
         </Context.Provider>

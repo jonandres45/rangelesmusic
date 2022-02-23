@@ -23,11 +23,7 @@ function Presentation(){
                         <p className='subtitle-ri' >DJ / Music producer & Creative</p>
                     </Grid>
                     
-                    <Grid item xs={12} style={{ justifyContent: "center", display: "flex" }}>
-                        <Avatar sx={{ width: 60, height: 60, bgcolor:'black' }}>
-                            <PlayArrowIcon className='icon-play' sx={{ fontSize: 50 }}></PlayArrowIcon>
-                        </Avatar>
-                    </Grid>
+                    
                 </Grid>
             </Box>
             </div>

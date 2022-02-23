@@ -8,15 +8,11 @@ import {Context} from '../Context';
 import LinearProgress from '@mui/material/LinearProgress';
 
 function Tracks(props){
-    const {resetStatus} = React.useContext(Context);
-    const [perro, setPerro] = React.useState(props.play);
-    console.log(props.play);
-    const playMusic = ()=>{        
-        resetStatus(props.title);
-    }
+    const {resetStatus, refMusic, setRefMusic} = React.useContext(Context);
+    const [player] = React.useState(props.play);
 
-    const eje = ()=>{
-        setPerro(true);
+    const playMusic = ()=>{        
+        resetStatus(props.title, props.song);
     }
     
 
@@ -32,9 +28,7 @@ function Tracks(props){
                 <div className="center-screen capa-light">
                     <div>
                         <img alt='ligth' src={props.image} style={{maxWidth: '300px'}}></img>
-                        {perro}
-                        <button onClick={()=>eje()}>Ejemplo</button>
-                            {perro ? <LinearProgress/> : 
+                            {player ? <LinearProgress/> : 
                             <div className='center-screen'>
                                 <Avatar sx={{ width: 60, height: 60, bgcolor:'black' }}>                                
                                     <PlayArrowIcon className='icon-play' sx={{ fontSize: 50, rounded:'1' }} onClick={()=>playMusic()}/>
