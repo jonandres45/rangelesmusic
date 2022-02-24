@@ -31,14 +31,16 @@ function Contact(){
                     <h1 className='title-contact'>Contact</h1>
                 </Grid>
                 <Grid item lg={4} md={6} sm={6} xs={10}>
-                    <label>Name</label><input type="text" className='input-form-contact'></input>
-                    <label>Email</label>
-                    <input type="text" className='input-form-contact'></input>
-                    <label>Phone Number</label>
-                    <input type="text" className='input-form-contact'></input>
-                    <label>Message</label>
-                    <textarea className='input-form-contact'></textarea>
-                    <button className='btn-send-message'>Send Message</button>
+                    <form>
+                        <label>Name</label><input type="text" className='input-form-contact'></input>
+                        <label>Email</label>
+                        <input type="text" className='input-form-contact'></input>
+                        <label>Phone Number</label>
+                        <input type="text" className='input-form-contact'></input>
+                        <label>Message</label>
+                        <textarea className='input-form-contact'></textarea>
+                        <button className='btn-send-message'>Send Message</button>
+                    </form>
                     <Stack direction="row" spacing={2} marginTop={8} justifyContent='center'>
                         <Avatar alt="Sound Cloud" src={Soundcloud} />
                         <Avatar alt="Sound Cloud" src={Spotify} />

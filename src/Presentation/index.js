@@ -23,7 +23,8 @@ function Presentation(){
                 </Grid>
             </Box>
             </div>
-            <video muted autoPlay loop>
+            <img src="../static/media/production_ID_4188339.png" className='image-video'></img>
+            <video muted autoPlay loop className='image-video'>
                 <source src={'../static/video/richi.mp4'} type="video/mp4"></source>
             </video>
             <div className='capa'></div>
