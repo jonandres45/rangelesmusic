@@ -40,7 +40,7 @@ function ContextProvider(props){
         title: 'RICARDO ANGELES - Citlaltepetl (Original Mix)[EXCLUSIVE FOR VERFLIXT]',
         description: 'In pre-christian antiquity, long before the Teotihuacan, Toltec, and Aztec civilizations, this entire region was called Poyauhtlán. This volcano is the geological representation of the god Poyauhtecatl. That is why the original name of the volcano is Poyautecatl, which means "the one where the mist thins", although it was better known by the name of Citlaltépetl, from the Nahuatl Citlalli (star) and Tepētl (mountain), which together means "star mountain" , because its snowy summit shines all day. A reference that explains the name of “star mountain” is that from one of the neighboring towns to the volcano, Coscomatepec, in the autumn to winter seasons at night, the planet Venus (the brightest star in the sky) could be seen crossing the sky over the crater of the volcano while passing the night.',
         image: '../static/songs/RicardoAngeles-Citlaltepetl/DESIGN_ELEGANT_Citlaltepetl_PORTADA.jpg',
-        song: '../static/songs/RicardoAngeles-Citlaltepetl/RICARDO ANGELES - Citlaltepetl (Original Mix)_master_004_15_ene_22',
+        song: '../static/songs/RicardoAngeles-Citlaltepetl/RICARDOANGELES-Citlaltepetl(OriginalMix)_master_004_15_ene_22.mp3',
         background: 'background-citla',
         play: false
       },
