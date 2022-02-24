@@ -46,6 +46,7 @@ function ContextProvider(props){
       },
     ]
     const [listTracksOrigin, setlistTracksOrigin] = React.useState(obj);
+    const [songTitle, setSongTitle]= React.useState('');
 
       const resetStatus = (data, song)=>{
         const res = listTracksOrigin.findIndex(obj => obj.title === data);
@@ -53,16 +54,18 @@ function ContextProvider(props){
         newList[res].play = true;        
         setlistTracksOrigin(newList);
         setRefMusic(song);
+        setSongTitle(data);
       }
 
-    const [refMusic, setRefMusic] = React.useState('../static/songs/LIGHT/Ricardo_Angeles_Light_feat._Hadja_(Original Mix).mp3');
+    const [refMusic, setRefMusic] = React.useState('');
 
     return (
         <Context.Provider value={{
             listTracksOrigin,
             resetStatus,
             refMusic,
-            setRefMusic
+            setRefMusic,
+            songTitle,
         }}>
             {props.children}
         </Context.Provider>

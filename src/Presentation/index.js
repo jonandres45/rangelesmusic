@@ -3,8 +3,6 @@ import './Presentation.css';
 //import video from '../static/video/richi.mp4';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import Avatar from '@mui/material/Avatar';
 
 function Presentation(){
     return(
@@ -22,8 +20,6 @@ function Presentation(){
                         <h1 className='titulo linear-wipe'>Ricardo Angeles</h1>
                         <p className='subtitle-ri' >DJ / Music producer & Creative</p>
                     </Grid>
-                    
-                    
                 </Grid>
             </Box>
             </div>

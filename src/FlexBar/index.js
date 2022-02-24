@@ -9,7 +9,7 @@ function FlexBar(props){
         target: window ? window() : undefined,
     });
     return(
-        <Slide appear={false} direction="up" in={!trigger}>
+        <Slide appear={false} direction="up" in={trigger} style={{color: 'white', background:'rgba(0,0,0,.5)', textAlign:'center'}}>            
             <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex:'10', }} elevation={3}>
                 {children}
             </Paper>
