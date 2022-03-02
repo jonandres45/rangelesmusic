@@ -7,6 +7,7 @@ import { Carousel } from '../Carousel';
 import { MenuMobil } from '../Menu/MenuMobil';
 import { FlexBar } from '../FlexBar';
 import { Player } from '../Player';
+import { Footer } from '../Footer';
 
 function AppUI(){
     return (
@@ -19,6 +20,7 @@ function AppUI(){
             <Player></Player>          
                 <MenuMobil></MenuMobil>
             </FlexBar>
+            <Footer/>
         </React.Fragment>
     );
 }

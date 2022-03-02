@@ -14,7 +14,7 @@ function Release(props){
                 direction="row"
                 justifyContent="center"
                 alignItems="stretch"
-                height= "100vh"
+                className='back-release'
             >
                 {props.children}
             </Grid>

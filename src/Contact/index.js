@@ -1,12 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
-import Avatar from '@mui/material/Avatar';
-import Soundcloud from '../static/images/soundcloud.png';
-import Spotify from '../static/images/spotify.png';
-import Instagram from '../static/images/instagram.png';
-import Facebook from '../static/images/facebook.png';
 import Alert from '@mui/material/Alert';
 import axios from 'axios';
 import LinearProgress from '@mui/material/LinearProgress';
@@ -23,27 +17,7 @@ function Contact (props){
             message:''
         });
     const [loading, setLoading] = React.useState(false);
-    const [success, setSuccess] = React.useState(false);    
-    /*const handleInputChange = (event)=>{
-        const target = event.target;
-        const value = target.value;
-        const name = target.name;
-
-        setContactInfo(state => ({...state, [name]: value}));
-    }*/
-
-/*     const handleSubmit = async (event)=>{
-        event.preventDefault();
-        setSuccess(false);
-        setLoading(true);
-
-        const res = await axios.post("http://localhost/mensaje.php", JSON.stringify(contactInfo));
-
-        console.log(res);
-
-        setSuccess(true);
-        setLoading(false);
-    }*/
+    const [success, setSuccess] = React.useState(false);
     const sendMessage = async ()=>{
         setSuccess(false);
         setLoading(true);
@@ -59,7 +33,6 @@ function Contact (props){
     return(
         <Box
             sx={{
-                height: "100vh",
                 width: "100%",
                 color: 'white',
                 flexGrow: 1,
@@ -100,11 +73,9 @@ function Contact (props){
                     >
                         {(props)=>{
                             const {
-                                values,
                                 errors,
                                 touched,
                                 handleSubmit,
-                                isSubmitting,
                             } = props;
                             return (
                                 <form onSubmit={handleSubmit}>
@@ -157,12 +128,6 @@ function Contact (props){
                             );
                         }}
                     </Formik>
-                    <Stack direction="row" spacing={2} marginTop={8} justifyContent='center'>
-                        <Avatar alt="Sound Cloud" src={Soundcloud} />
-                        <Avatar alt="Sound Cloud" src={Spotify} />
-                        <Avatar alt="Sound Cloud" src={Instagram} />
-                        <Avatar alt="Sound Cloud" src={Facebook} />
-                    </Stack>
                 </Grid>
             </Grid>
         </Box>

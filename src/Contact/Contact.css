@@ -4,6 +4,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'NewYork';
+    height: "100vh";
+    padding-bottom: 35px;
 }
 
 .title-contact{
@@ -58,4 +60,13 @@ textarea{
 .btn-send-message:hover{
     background: rgb(43, 43, 43);
     transition: .2s;
+}
+
+@media (max-width: 600px) {
+    .title-contact{
+        font-size: 60px;
+    }
+    .back-contact{
+        height: auto;
+    }
 }
