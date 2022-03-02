@@ -10,22 +10,12 @@ import * as Yup from "yup";
 import './Contact.css';
 
 function Contact (props){
-    const [contactInfo, setContactInfo] = React.useState({
-            nombre: '', 
-            mail: '', 
-            phone:'', 
-            message:''
-        });
     const [loading, setLoading] = React.useState(false);
     const [success, setSuccess] = React.useState(false);
-    const sendMessage = async ()=>{
+    const sendMessage = async (values)=>{
         setSuccess(false);
         setLoading(true);
-
-        const res = await axios.post("http://localhost/mensaje.php", JSON.stringify(contactInfo));
-
-        console.log(res);
-
+        await axios.post("https://rangelesmusic.com/mensaje.php", JSON.stringify(values));
         setSuccess(true);
         setLoading(false);
     }
@@ -59,16 +49,15 @@ function Contact (props){
                         }}
 
                         validationSchema={Yup.object().shape({
-                            nombre: Yup.string().required("Requireddddddd"),
+                            nombre: Yup.string().required("Required"),
                             mail: Yup.string().email("Invalid email").required("Required"),
                             phone: Yup.number("wrong phone").min(8,"wrong phone").required("Required"),
                             message: Yup.string().required('Required')
                         })}
 
                         onSubmit={(values, {setSubmitting})=>{
-                            setContactInfo({...values});
                             setSubmitting(false);
-                            sendMessage();
+                            sendMessage(values);
                         }}
                     >
                         {(props)=>{

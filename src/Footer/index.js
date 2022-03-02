@@ -33,7 +33,9 @@ function Footer(){
                         <h3>
                             <a href="mailto:contact@rangelesmusic.com?subject=Hi" style={{color:'white', textDecoration:'none'}}>contact@rangelesmusic.com</a>
                         </h3>
-                        <h4>Design by Andrés Ortiz</h4>
+                        <h4>
+                            <a href="mailto:ansa1315@outlook.es" style={{color:'white', textDecoration:'none'}}>Designed by Andrés Ortiz</a>
+                        </h4>
                     </Grid>
                 </Grid>
             </Box>

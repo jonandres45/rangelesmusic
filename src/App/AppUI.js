@@ -10,17 +10,18 @@ import { Player } from '../Player';
 import { Footer } from '../Footer';
 
 function AppUI(){
+    
     return (
-        <React.Fragment>
+        <React.Fragment>                
             <MenuDesk></MenuDesk>
             <Presentation></Presentation>
             <Carousel></Carousel>
             <Contact></Contact>
-            <FlexBar> {/* Menú flex (reproductor y menú mobil) */}
+            <FlexBar>  {/* Menú flex (reproductor y menú mobil) */}
             <Player></Player>          
                 <MenuMobil></MenuMobil>
             </FlexBar>
-            <Footer/>
+            <Footer/>                
         </React.Fragment>
     );
 }
