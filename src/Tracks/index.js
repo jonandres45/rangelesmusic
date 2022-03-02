@@ -8,7 +8,7 @@ import {Context} from '../Context';
 import LinearProgress from '@mui/material/LinearProgress';
 
 function Tracks(props){
-    const {resetStatus, refMusic, setRefMusic} = React.useContext(Context);
+    const {resetStatus} = React.useContext(Context);
     const [player] = React.useState(props.play);
 
     const playMusic = ()=>{        
