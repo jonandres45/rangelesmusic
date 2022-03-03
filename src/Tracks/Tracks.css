@@ -23,3 +23,19 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+
+.read-or-hide{
+    color: rgb(196, 219, 255);
+    cursor: pointer;
+}
+
+.read-or-hide:hover{
+    color: rgb(253, 255, 161);
+}
+
+
+@media (max-width: 500px) {
+    .track-title{
+        font-size: 25px;
+    }    
+}

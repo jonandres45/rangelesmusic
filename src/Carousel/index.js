@@ -30,12 +30,7 @@ function Carousel(){
           }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
-          style={{
-            height:'100vh', 
-            backgroundColor: 'black', 
-            color: 'white',
-            textAlign:'center',
-          }}
+          className="swiper-container"
         >
           {listTracks.map(track =>(
             <SwiperSlide key={(new Date().getTime()) + track.title}>

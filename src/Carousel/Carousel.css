@@ -4,3 +4,17 @@
 .swiper-button-next{
   color: white;
 }
+
+.swiper-container{
+  height: 100vh;
+  color: white;
+  background: black;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .swiper-container{
+    height: auto;
+  }
+}
+

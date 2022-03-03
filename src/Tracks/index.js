@@ -10,18 +10,39 @@ import LinearProgress from '@mui/material/LinearProgress';
 function Tracks(props){
     const {resetStatus} = React.useContext(Context);
     const [player] = React.useState(props.play);
+    const [isReadMore, setIsReadMore] = React.useState(true);
+
+    const toggleReadMore = ()=>{
+        setIsReadMore(!isReadMore);
+    }
+
+    const ReadMore = ({children})=>{
+        const text = children;
+        
+        if(text.length > 340){
+            return (
+                <p>
+                    {isReadMore ? text.slice(0, 340) : text}
+                    <span onClick={toggleReadMore} className="read-or-hide">
+                        {isReadMore ? "...read more" : " show less"}
+                    </span>
+                </p>
+            );
+        }else{
+            return <p>{text}</p>
+        }
+    }
 
     const playMusic = ()=>{        
         resetStatus(props.title, props.song);
     }
     
-
     return(
         <React.StrictMode>
             <Grid item xs={12} md={6} className='center-screen'>
                 <div className='song-description'>
-                    <h1>{props.title}</h1>
-                    <p>{props.description}</p>
+                    <h1 className='track-title'>{props.title}</h1>
+                    <ReadMore>{props.description}</ReadMore>
                 </div>
             </Grid>
             <Grid item xs={12} md={6} className={props.background}>
