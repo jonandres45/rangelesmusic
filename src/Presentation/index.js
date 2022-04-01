@@ -8,7 +8,6 @@ function Presentation(){
     return(
         <div className='hero' id="home">
             <div className='promo'>
-
             <Box
                 display="flex"
                 justifyContent="center"
