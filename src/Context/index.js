@@ -56,8 +56,15 @@ function ContextProvider(props){
         setRefMusic(song);
         setSongTitle(data);
       }
-
     const [refMusic, setRefMusic] = React.useState('');
+
+    const [toggleModal, setToggleModal] = React.useState(false);    
+
+    React.useEffect(()=>{
+      setTimeout(()=>{
+        setToggleModal(true);
+      }, 5000);
+    }, []);
 
     return (
         <Context.Provider value={{
@@ -66,6 +73,8 @@ function ContextProvider(props){
             refMusic,
             setRefMusic,
             songTitle,
+            toggleModal,
+            setToggleModal,
         }}>
             {props.children}
         </Context.Provider>

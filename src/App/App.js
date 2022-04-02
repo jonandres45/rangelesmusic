@@ -11,7 +11,7 @@ function App() {
     const loading = ()=>{
       setLoading(false);
     }
-    loading();
+    loading();    
   }, []);
 
   return (

@@ -6,7 +6,7 @@ import axios from 'axios';
 import LinearProgress from '@mui/material/LinearProgress';
 import {Formik, Field} from 'formik';
 import * as Yup from "yup";
-
+//import {Music} from '../Animations/music';
 import './Contact.css';
 
 function Contact (props){
@@ -24,19 +24,25 @@ function Contact (props){
         <Box
             sx={{
                 width: "100%",
+                height:'100vh',
                 color: 'white',
                 flexGrow: 1,
                 textAlign:'center',
                 display:'flex',
                 justifyContent:'center',
                 alignItems:'center'
-            }}
+            }}        
             className="back-contact"
             id="contact"
         >
-            <Grid container justifyContent='center'>
+            <Grid container justifyContent='center' alignItems="center" >
                 <Grid item xs={12}>
                     <h1 className='title-contact'>Contact</h1>
+                </Grid>
+                <Grid item lg={4} md={6} sm={6} xs={10}>
+                    <img src="/static/images/ContactImage.jpg" alt='mar-ricardo' className='imageContact'>
+
+                    </img>
                 </Grid>
                 <Grid item lg={4} md={6} sm={6} xs={10}>
                     {/*https://mariomenjr.com/blog/2020/09/04/como-validar-formularios-en-react-sin-lagrimas/*/}
@@ -51,7 +57,6 @@ function Contact (props){
                         validationSchema={Yup.object().shape({
                             nombre: Yup.string().required("Required"),
                             mail: Yup.string().email("Invalid email").required("Required"),
-                            phone: Yup.number("wrong phone").min(8,"wrong phone").required("Required"),
                             message: Yup.string().required('Required')
                         })}
 
@@ -85,17 +90,7 @@ function Contact (props){
                                     ></Field>
                                     {errors.mail && touched.mail ? (
                                         <Alert severity="warning">{errors.mail}</Alert>
-                                    ) : null}
-                                    
-                                    <label>Phone Number</label>
-                                    <Field
-                                        type="text"
-                                        className='input-form-contact'
-                                        name="phone"
-                                    ></Field>
-                                    {errors.phone && touched.phone ? (
-                                        <Alert severity="warning">{errors.phone}</Alert>
-                                    ): null}
+                                    ) : null}                                    
                                     <label>Message</label>
                                     <Field 
                                         className='input-form-contact' 
@@ -117,7 +112,7 @@ function Contact (props){
                             );
                         }}
                     </Formik>
-                </Grid>
+                </Grid>                
             </Grid>
         </Box>
     );

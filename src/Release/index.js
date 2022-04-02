@@ -10,6 +10,7 @@ function Release(props){
                 justifyContent="center"
                 alignItems="stretch"
                 className='back-release'
+                id="release"
             >
                 {props.children}
             </Grid>
