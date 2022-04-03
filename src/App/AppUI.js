@@ -9,6 +9,7 @@ import { FlexBar } from '../FlexBar';
 import { Player } from '../Player';
 import { Footer } from '../Footer';
 import { Modale } from '../Modale';
+import { Newsletters } from '../Newsletters';
 
 function AppUI(){
     
@@ -17,8 +18,10 @@ function AppUI(){
             <MenuDesk></MenuDesk>
             <Presentation></Presentation>
             <Modale
-                title="Subscribe email to newsletters"
-            />
+                title="Join newsletter. Get rewarded with access to exclusive merchandise and releases"
+            >
+                <Newsletters/>
+            </Modale>
             <Carousel></Carousel>
             <Contact></Contact>
             <FlexBar>  {/* Menú flex (reproductor y menú mobil) */}

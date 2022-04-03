@@ -50,7 +50,6 @@ function Contact (props){
                         initialValues={{
                             nombre: "",
                             mail: "",
-                            phone: "",
                             message: ""
                         }}
 
@@ -112,7 +111,7 @@ function Contact (props){
                             );
                         }}
                     </Formik>
-                </Grid>                
+                </Grid>
             </Grid>
         </Box>
     );
