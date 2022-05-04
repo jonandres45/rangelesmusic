@@ -34,9 +34,9 @@ function Modale(props){
             <Typography id="modal-modal-title" variant="h6" component="h2">
                 {props.title}
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            <div id="modal-modal-description" sx={{ mt: 2 }}>
                 {props.children}
-            </Typography>
+            </div>
             </Box>
         </Modal>
         </div>

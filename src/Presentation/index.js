@@ -3,7 +3,7 @@ import './Presentation.css';
 //import video from '../static/video/richi.mp4';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-
+import video from '../static/videos/richi.mp4';
 function Presentation(){
     return(
         <div className='hero' id="home">
@@ -24,7 +24,7 @@ function Presentation(){
             </div>
             <img src="../static/media/production_ID_4188339.png" className='image-video' alt='imageNotvideo'></img>
             <video muted autoPlay loop className='image-video'>
-                <source src={'../static/video/richi.mp4'} type="video/mp4"></source>
+                <source src={video} type="video/mp4"></source>
             </video>
             <div className='capa'></div>
         </div>
