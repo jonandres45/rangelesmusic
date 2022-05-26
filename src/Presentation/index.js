@@ -1,6 +1,5 @@
 import React from 'react';
 import './Presentation.css';
-//import video from '../static/video/richi.mp4';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import video from '../static/videos/richi.mp4';

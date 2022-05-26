@@ -24,4 +24,3 @@ yarn-error.log*
 
 #public
 /public/static
-/src/static
