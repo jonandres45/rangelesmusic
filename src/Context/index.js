@@ -1,7 +1,10 @@
 import React from 'react';
 import Light from '../static/songs/LIGHT/Light_Cover.jpg';
+import LightSongs from '../static/songs/LIGHT/Ricardo_Angeles_Light_feat._Hadja_(Original Mix).mp3';
 import Dopamine from '../static/songs/DOPAMINE-REMIX/IMG_7351.jpeg';
+import DopamineSong from '../static/songs/DOPAMINE-REMIX/Rehoxx_SECMOS-Dopamine_(RicardoAngelesRemix)_MP3_320KBPS_MASTER.mp3';
 import PinkPinkowitz from '../static/songs/RicardoAngeles_Pinkowitz-HiddenPathway/hidden_pathway_portada.jpg';
+import PinkPinkowitzSong from '../static/songs/RicardoAngeles_Pinkowitz-HiddenPathway/RicardoAngeles_Pinkowitz-HiddenPathway(OriginalMix).mp3';
 import CrystalColors from '../static/songs/RicardoAngeles_PhillipeLois-CrystalColors/DESIGN_ELEGANT_PHILLIPE LOIS_PORTADA.jpg';
 import Citlaltepetl from '../static/songs/RicardoAngeles-Citlaltepetl/DESIGN_ELEGANT_Citlaltepetl_PORTADA.jpg';
 
@@ -13,7 +16,7 @@ function ContextProvider(props){
         title: 'Light ft.Hadja',
         description: '"Light" is the title that Ricardo Angeles has decided to give to his debut single, making this track a new stage in his musical career with his first international collaboration with the multi-instrumentalist and singer “Hadja” under the German label Verflixt Music. After having experimented with other musical genres I decided to focus on producing music that could reflect emotions, coming across Melodic House & Techno which immediately caught my attention and from that moment I started this new adventure',
         image: Light,
-        song: '../static/songs/LIGHT/Ricardo_Angeles_Light_feat._Hadja_(Original Mix).mp3',
+        song: LightSongs,
         background: 'background-light',
         play: false
       },
@@ -21,7 +24,7 @@ function ContextProvider(props){
         title: 'Dopamine (Ricardo Angeles Remix)',
         description: '“Dopamine Remix” a track that has its roots in trance by producer Rehoxx and the melodic foundations of SECMOS form a new experience with the Ricardo Angeles remix taking the best of both parts and transporting it to Melodic House & Techno.',
         image: Dopamine,
-        song: '../static/songs/DOPAMINE-REMIX/Rehoxx_SECMOS-Dopamine_(RicardoAngelesRemix)_MP3_320KBPS_MASTER.mp3',
+        song: DopamineSong,
         background: 'background-dopamine',
         play: false
       },
@@ -29,7 +32,7 @@ function ContextProvider(props){
         title: 'Ricardo Angeles & Pinkowitz - Hidden Pathway (Original Mix) [OUT SOON]',
         description: '“Working with Ricardo has been an absolute pleasure. We became friends after connecting on Spencer Brown’s Demo streams and discord server, and quickly learned we both share a passion for organic house. With Hidden Pathway, Ricardo shared an excellent melody and track stems - and I built from there. After jamming some synth and adding some additional harmonies and drum sections, Ricardo brought it home with the arrangement and extra polish. Working across time zones was easy with such a great collaborator! This track has been a lot of fun to make, and I hope you enjoy it as well".',
         image: PinkPinkowitz,
-        song: '../static/songs/RicardoAngeles_Pinkowitz-HiddenPathway/RicardoAngeles_Pinkowitz-HiddenPathway(OriginalMix).mp3',
+        song: PinkPinkowitzSong,
         background: 'background-pinko',
         play: false
       },
@@ -53,17 +56,24 @@ function ContextProvider(props){
     const [listTracksOrigin, setlistTracksOrigin] = React.useState(obj);
     const [songTitle, setSongTitle]= React.useState('');
 
-      const resetStatus = (data, song)=>{
-        const res = listTracksOrigin.findIndex(obj => obj.title === data);
-        const newList = [...obj];
-        newList[res].play = true;        
-        setlistTracksOrigin(newList);
-        setRefMusic(song);
-        setSongTitle(data);
-      }
+    const resetStatus = (data, song)=>{
+      console.log(data);
+      console.log(song);
+      const res = listTracksOrigin.findIndex(obj => obj.title === data);
+      const newList = [...obj];
+      newList[res].play = true;        
+      setlistTracksOrigin(newList);
+      setRefMusic(song);
+      setSongTitle(data);
+    }
+
+    const playAuto = (data)=>{
+      resetStatus(listTracksOrigin[data].title, listTracksOrigin[data].song);
+    }
+
     const [refMusic, setRefMusic] = React.useState('');
 
-    const [toggleModal, setToggleModal] = React.useState(false);    
+    const [toggleModal, setToggleModal] = React.useState(false);
 
     React.useEffect(()=>{
       setTimeout(()=>{
@@ -80,6 +90,7 @@ function ContextProvider(props){
             songTitle,
             toggleModal,
             setToggleModal,
+            playAuto
         }}>
             {props.children}
         </Context.Provider>

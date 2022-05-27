@@ -10,20 +10,22 @@ import { Release } from '../Release';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
-
 import { Tracks } from '../Tracks';
-
 import {Context} from '../Context';
 
 function Carousel(){
-    const {listTracksOrigin} = React.useContext(Context);
+    const {listTracksOrigin, playAuto} = React.useContext(Context);
     const listTracks = listTracksOrigin;
     return (
         <Swiper 
+          onSlideChange={(swiperCore) => {
+            const { activeIndex } = swiperCore;
+            playAuto(activeIndex);
+          }}
           centeredSlides={true}
           autoplay={{
-            delay: 14000,
-            disableOnInteraction: false,
+            delay: 16000,
+            disableOnInteraction: true,
           }}
           pagination={{
             clickable: true,
