@@ -6,7 +6,9 @@ import DopamineSong from '../static/songs/DOPAMINE-REMIX/Rehoxx_SECMOS-Dopamine_
 import PinkPinkowitz from '../static/songs/RicardoAngeles_Pinkowitz-HiddenPathway/hidden_pathway_portada.jpg';
 import PinkPinkowitzSong from '../static/songs/RicardoAngeles_Pinkowitz-HiddenPathway/RicardoAngeles_Pinkowitz-HiddenPathway(OriginalMix).mp3';
 import CrystalColors from '../static/songs/RicardoAngeles_PhillipeLois-CrystalColors/DESIGN_ELEGANT_PHILLIPE LOIS_PORTADA.jpg';
+import CrystalColorsSong from '../static/songs/RicardoAngeles_PhillipeLois-CrystalColors/RicardoAngeles_PhillipeLois-CrystalColors(OriginalMix).mp3';
 import Citlaltepetl from '../static/songs/RicardoAngeles-Citlaltepetl/DESIGN_ELEGANT_Citlaltepetl_PORTADA.jpg';
+import CitlaltepetlSong from '../static/songs/RicardoAngeles-Citlaltepetl/RICARDOANGELES-Citlaltepetl(OriginalMix)_master_004_15_ene_22.mp3';
 
 const Context = React.createContext();
 
@@ -40,7 +42,7 @@ function ContextProvider(props){
         title: 'Ricardo Angeles & Phillipe Lois - Crystal Colors (Original Mix) [OUT SOON]',
         description: 'The meaning and feeling behind this track are how we both Ricardo and Felipe share the same passion for music, how proud we are about being from Latin America which besides having Latin roots we are deeply connected with electronic music which for us is a global expression. It’s finally how music connects people around the globe and erase boarders and the distance between people. When discussing about the landscapes our countries have, we realized that the layers and sections the record has are somehow similar to ‘Caño Cristales’ a lake in Colombia that has 7 colors, and idea with a solid foundation that constantly evolves. ‘Crystal Colors’ is the merge of two cultures that share similar things, of how both countries have such a great relationship and what beautiful landscapes we have that inspire to travel to finally meet the others person culture. We believe we aimed for dance floor vibes and a rave feeling, something energetic, uplifting and exciting.',
         image: CrystalColors,
-        song: '../static/songs/RicardoAngeles_PhillipeLois-CrystalColors/RicardoAngeles_PhillipeLois-CrystalColors(OriginalMix).mp3',
+        song: CrystalColorsSong,
         background: 'background-crystal',
         play: false
       },
@@ -48,7 +50,7 @@ function ContextProvider(props){
         title: 'RICARDO ANGELES - Citlaltepetl (Original Mix)[EXCLUSIVE FOR VERFLIXT]',
         description: 'In pre-christian antiquity, long before the Teotihuacan, Toltec, and Aztec civilizations, this entire region was called Poyauhtlán. This volcano is the geological representation of the god Poyauhtecatl. That is why the original name of the volcano is Poyautecatl, which means "the one where the mist thins", although it was better known by the name of Citlaltépetl, from the Nahuatl Citlalli (star) and Tepētl (mountain), which together means "star mountain" , because its snowy summit shines all day. A reference that explains the name of “star mountain” is that from one of the neighboring towns to the volcano, Coscomatepec, in the autumn to winter seasons at night, the planet Venus (the brightest star in the sky) could be seen crossing the sky over the crater of the volcano while passing the night.',
         image: Citlaltepetl,
-        song: '../static/songs/RicardoAngeles-Citlaltepetl/RICARDOANGELES-Citlaltepetl(OriginalMix)_master_004_15_ene_22.mp3',
+        song: CitlaltepetlSong,
         background: 'background-citla',
         play: false
       },
