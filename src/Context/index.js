@@ -1,11 +1,11 @@
 import React from 'react';
-import Light from '../static/songs/LIGHT/Light_Cover.jpg';
+import Light from '../static/songs/LIGHT/Light_Cover.png';
 import LightSongs from '../static/songs/LIGHT/Ricardo_Angeles_Light_feat._Hadja_(Original Mix).mp3';
 import Dopamine from '../static/songs/DOPAMINE-REMIX/IMG_7351.jpeg';
 import DopamineSong from '../static/songs/DOPAMINE-REMIX/Rehoxx_SECMOS-Dopamine_(RicardoAngelesRemix)_MP3_320KBPS_MASTER.mp3';
-import PinkPinkowitz from '../static/songs/RicardoAngeles_Pinkowitz-HiddenPathway/hidden_pathway_portada.jpg';
+import PinkPinkowitz from '../static/songs/RicardoAngeles_Pinkowitz-HiddenPathway/hidden_pathway_portada.png';
 import PinkPinkowitzSong from '../static/songs/RicardoAngeles_Pinkowitz-HiddenPathway/RicardoAngeles_Pinkowitz-HiddenPathway(OriginalMix).mp3';
-import CrystalColors from '../static/songs/RicardoAngeles_PhillipeLois-CrystalColors/DESIGN_ELEGANT_PHILLIPE LOIS_PORTADA.jpg';
+import CrystalColors from '../static/songs/RicardoAngeles_PhillipeLois-CrystalColors/DESIGN_ELEGANT_PHILLIPE LOIS_PORTADA.png';
 import CrystalColorsSong from '../static/songs/RicardoAngeles_PhillipeLois-CrystalColors/RicardoAngeles_PhillipeLois-CrystalColors(OriginalMix).mp3';
 import Citlaltepetl from '../static/songs/RicardoAngeles-Citlaltepetl/DESIGN_ELEGANT_Citlaltepetl_PORTADA.jpg';
 import CitlaltepetlSong from '../static/songs/RicardoAngeles-Citlaltepetl/RICARDOANGELES-Citlaltepetl(OriginalMix)_master_004_15_ene_22.mp3';
